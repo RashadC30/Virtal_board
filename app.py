@@ -27,4 +27,7 @@ def handle_draw_stroke(data):
 def handle_clear_board():
     # Clear the stroke history and broadcast the clear event to all clients
     stroke_history.clear()
-    emit("clear_board", broadcast=True)    
+    emit("clear_board", broadcast=True)
+    
+if __name__ == "__main__":
+    socketio.run(app, debug=True)    
